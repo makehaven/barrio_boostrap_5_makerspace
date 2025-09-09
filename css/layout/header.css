@@ -1,0 +1,436 @@
+/* temp align title to center and hide breadcrumb */
+#navbar-main {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: center; /* Aligns items horizontally in the center */
+  height: 100%; /* Adjust based on your needs */
+  text-align: center; /* Ensures the text itself is centered if it wraps */
+}
+ol.breadcrumb {
+    visibility: hidden;
+}
+
+/* Secondary top user navigation bar */
+
+
+.region-secondary-menu .nav a {
+   color: #212529;
+   font-size: medium;
+   padding: 0px 1rem;
+}
+
+a.nav-link--user::before, a.nav-link--user-logout::before, a.nav-link--user-login::before
+{
+filter: invert(1);
+}
+
+.region-secondary-menu a.nav-link--community-engagement::before, .region-secondary-menu a.nav-link--member-resources::before, .region-secondary-menu a.nav-link--dashboard::before  {
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    -webkit-background-size: 1rem 1rem;
+    background-size: 1rem 1rem;
+    background-position: 0 0.25rem;
+    width: 1.5rem;
+    height: 1.2rem;
+}
+
+.region-secondary-menu a.nav-link--dashboard::before
+
+{
+background-image: url(/themes/custom/makehaven_barrio/images/speedometer2.svg);
+}
+
+.region-secondary-menu a.nav-link--facilitator-toolbox::before
+{
+background-image: url(/themes/custom/makehaven_barrio/images/wrench-adjustable-circle.svg);
+}
+
+.region-secondary-menu a.nav-link--member-resources::before
+{
+background-image: url(/themes/custom/makehaven_barrio/images/archive.svg);
+}
+
+.region-secondary-menu a.nav-link--community-engagement::before
+{
+background-image: url(/themes/custom/makehaven_barrio/images/people.svg);
+}
+
+/* Active menu item highlighting*/
+.dropdown-item.active, .dropdown-item:active {
+    color: #000;
+    text-decoration: none;
+    background-color: #cccccc;
+    border-radius: 7px;
+}
+
+/* Header menu bar styles*/
+
+a.navbar-brand img {
+    display: block;
+}
+
+
+header#header {
+    background-color: #AFAFAF;
+    border-bottom: solid red 5px
+}
+.navbar>.container
+{
+    justify-content: flex-end;
+}
+
+
+.navbar
+{
+    padding-bottom: 0rem;
+}
+
+nav#block-makehaven-barrio-main-menu {
+    width: 100%;
+}
+
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+}
+
+.dropdown-item a {
+    color: #303030;
+}
+
+/* Restored from original style.css, as pointed out by code review */
+.navbar-nav .nav-link {
+    font-size: 24px;
+}
+
+/* New header styles from user */
+
+.user-logged-in nav#navbar-top {
+    height: 0px;
+}
+nav#navbar-top {
+    padding-bottom: 10px;
+    padding-top: 0px;
+}
+
+a.navbar-brand {
+    display: block;
+    width: 250px; /* Adjust width to make the logo smaller */
+}
+
+nav#block-barrio-boostrap-5-makehaven-useraccountmenu {
+    max-width: 250px;
+}
+
+/* General layout for the full-width header */
+.header {
+    width: 100%;
+    background-color: grey; /* Replace with your actual background color */
+    position: relative;
+    z-index: 1; /* Ensure the header is below the admin toolbar */
+}
+
+/* Centered container for content within the header */
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px; /* Adjust according to your content width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px; /* Optional padding for spacing */
+}
+
+/* Style for the top header (user menu) */
+.region-top-header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Align user menu to the right */
+}
+
+.region-top-header .nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Style for the main navbar */
+#navbar-main {
+    display: flex;
+    justify-content: space-around; /* Space evenly between logo and menu */
+    align-items: center;
+    width: 100%;
+    max-width: 1000px; /* Match this with your desired content width */
+    margin: 0 auto;
+    padding: 0 15px; /* Add padding for better alignment */
+    flex-wrap: nowrap; /* Prevents wrapping of the main menu items */
+    z-index: 2; /* Ensure the navbar stays above the header but below the admin menu */
+}
+
+/* Prevent the main menu from wrapping */
+@media (min-width: 768px) {
+    #navbar-main .navbar-collapse {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: auto; /* Prevents the main menu from taking the full width */
+        flex-grow: 0;
+        flex-basis: auto;
+    }
+}
+
+/* Featured Top Section Styles */
+.featured-top {
+    width: 100%;
+    background-color: #f9f9f9; /* Light background for the featured top section */
+    padding: 15px 0; /* Padding around the entire featured top section */
+    margin-top: 20px; /* Space between header and featured top section */
+}
+
+.featured-top__inner {
+    max-width: 1000px; /* Keep the content within the desired width */
+    margin: 0 auto; /* Center the content */
+    padding: 0 15px; /* Optional padding for inner spacing */
+}
+
+.region-featured-top .block-menu {
+    background-color: #ffffff; /* Different background color for the member menu */
+    padding: 10px 20px; /* Padding inside the member menu block */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+/* Center the member menu items */
+.region-featured-top .nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+    margin: 0 auto;
+}
+
+/* Style individual menu links */
+.region-featured-top .nav-link {
+    color: #333333; /* Darken the link color */
+    font-weight: bold; /* Make the links bolder */
+    text-decoration: none; /* Remove underlines */
+    padding: 10px 20px; /* Add padding around each link */
+    margin: 5px; /* Add space between each menu item */
+    border: 1px solid #dddddd; /* Add a light border around each item */
+    border-radius: 5px; /* Optional: Add rounded corners to the links */
+    background-color: #f4f4f4; /* Slightly darker background to make the links stand out */
+}
+
+/* Style hover and active states */
+.region-featured-top .nav-link:hover,
+.region-featured-top .nav-link.is-active {
+    color: #000000; /* Even darker color on hover/active */
+    background-color: #e0e0e0; /* Darken the background slightly on hover/active */
+    border-color: #cccccc; /* Darken the border on hover/active */
+}
+
+/* Optional: Adjust the member menu on mobile devices */
+@media (max-width: 991px) {
+    .region-featured-top .block-menu {
+        text-align: center;
+    }
+}
+
+/* Adjust layout for mobile screens */
+@media (max-width: 767px) {
+    #navbar-main {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        margin-left: 0;
+        padding: 0 15px; /* Add padding for better centering */
+    }
+
+    .navbar-brand {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #navbar-main .navbar-collapse {
+        justify-content: center;
+        flex-grow: 1;
+        width: 100%;
+        display: none; /* Hide the menu items by default */
+    }
+
+    /* Ensure the menu items appear only when the hamburger is clicked */
+    #navbar-main .navbar-collapse.show {
+        display: flex; /* Display the menu when expanded */
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center;
+    }
+
+    /* Add spacing for the account menu on mobile */
+    #block-barrio-boostrap-5-makehaven-useraccountmenu {
+        margin-bottom: 15px;
+    }
+}
+
+/* Adjust layout for larger screens */
+@media (min-width: 768px) {
+    #navbar-main {
+        max-width: 1000px; /* Ensure logo and menu are closer together */
+        justify-content: space-between;
+    }
+
+    #block-barrio-boostrap-5-makehaven-useraccountmenu {
+        margin-left: 20px; /* Add some space on desktop */
+    }
+
+    /* Admin menu adjustments */
+    .toolbar-tray {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px; /* Adjust width as needed */
+        height: 100%;
+        z-index: 1000; /* High z-index to ensure it stays on top */
+    }
+
+    /* Show the admin menu when it’s activated */
+    .toolbar-tab.is-active .toolbar-tray {
+        display: block;
+    }
+
+    /* Offset the main content when the admin menu is active */
+    body.toolbar-tray-horizontal .toolbar-tray.is-active + #navbar-main {
+        margin-left: 250px; /* Match the width of the admin menu */
+    }
+
+    /* Adjust the navbar to be fully visible */
+    #navbar-main {
+        max-width: calc(100% - 250px); /* Adjust based on admin menu width */
+    }
+}
+
+/* Additional styles */
+nav#navbar-main {
+    max-width: 1140px; /* Limits the width of the navbar */
+    margin: 0 auto; /* Centers the navbar horizontally */
+    padding: 0 15px; /* Adds some padding on the sides for better alignment */
+    box-sizing: border-box; /* Ensures padding is included within the width */
+}
+
+.nav-link {
+    padding: .5rem 1.5rem .5rem 0rem;
+}
+
+/* General layout for the toolbar when in horizontal (top) mode */
+div#toolbar-item-administration-tray {
+    position: fixed;
+    top: 40px; /* Adjust to align with your header */
+    z-index: 1001; /* Keep it above other elements */
+    width: 100%; /* Full width when the tray is at the top */
+    left: 0; /* Ensure it starts at the left edge */
+    height: auto;
+}
+
+/* Admin menu for vertical (side) layout */
+.toolbar-tray-horizontal.toolbar-tray {
+    width: 250px; /* Fixed width for the side tray */
+    height: 100%; /* Full height when in vertical mode */
+    top: 0; /* Align to the top of the viewport */
+    left: 0; /* Align to the left of the screen */
+    z-index: 1000; /* Ensure it stays above content */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better separation */
+}
+
+/* Ensure the main content adjusts when the side tray is active */
+body.toolbar-tray-horizontal .toolbar-tray.is-active + #navbar-main,
+body.toolbar-tray-horizontal .toolbar-tray.is-active ~ .main-content {
+    margin-left: 250px; /* Match the side tray width */
+}
+
+/* Adjust the navbar width to be fully visible */
+#navbar-main {
+    max-width: calc(100% - 250px); /* Ensure the navbar adjusts to the reduced screen width */
+    z-index: 2; /* Keep it above the header but below the admin toolbar */
+    margin-left: auto; /* Align the navbar correctly when side tray is inactive */
+}
+
+/* Adjust the content for when the toolbar is in vertical mode */
+body.toolbar-tray-vertical .toolbar-tray {
+    position: fixed;
+    left: 0;
+    width: 250px; /* Width of the vertical toolbar */
+    height: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure it stays above the content */
+}
+
+body.toolbar-tray-vertical #navbar-main,
+body.toolbar-tray-vertical .main-content {
+    margin-left: 250px; /* Match the side tray width */
+}
+
+body.toolbar-tray-vertical .toolbar-tray.is-active ~ #navbar-main,
+body.toolbar-tray-vertical .toolbar-tray.is-active ~ .main-content {
+    margin-left: 250px; /* Ensure the content shifts when the tray is active */
+}
+
+/* Make sure the content area doesn’t overlap with the toolbar */
+.main-content {
+    margin-left: 0; /* Default state when side tray is not active */
+    transition: margin-left 0.3s ease; /* Smooth transition when the side tray becomes active */
+}
+
+/* Ensure dropdown menus are on top of other elements */
+.dropdown-menu {
+    z-index: 1050; /* Higher than other elements but below modals */
+    position: absolute; /* Necessary for z-index to work properly */
+}
+
+/* Adjusting z-index for the image or any other content that might be overlapping */
+.featured-top {
+    z-index: 1; /* Lower than the dropdown menu */
+    position: relative; /* Ensure stacking context is maintained */
+}
+
+/* Ensure the header doesn't interfere with the dropdown menu */
+.header {
+    z-index: 100; /* Lower than the dropdown but higher than content */
+    position: relative;
+}
+
+/* Ensure the entire dropdown item is clickable */
+.dropdown-menu .dropdown-item {
+    position: relative;
+    padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Fix issue where the link was being blocked */
+.dropdown-menu .dropdown-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1; /* Move it behind other elements so it doesn't block the link */
+}
+
+/* Make the anchor tag fill the entire item */
+.dropdown-menu .dropdown-item a {
+    display: block;
+    width: 100%;
+    padding: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Improve hover effect */
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+    color: #000;
+    background-color: var(--bs-dropdown-link-hover-bg);
+}
+
+a.nav-link.dropdown-toggle {
+    color: #303030;
+}

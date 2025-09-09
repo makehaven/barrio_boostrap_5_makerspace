@@ -1,0 +1,6 @@
+{
+    "name": "makehaven/barrio_boostrap_5_makerspace",
+    "description": "Custom Barrio subtheme for MakeHaven.",
+    "type": "drupal-custom-theme",
+    "license": "GPL-2.0-or-later"
+}

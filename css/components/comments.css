@@ -1,0 +1,93 @@
+/* lending library comment box */
+
+.node--type-library-item #comment-form
+{
+    padding: 25px;
+    border: solid grey;
+    border-radius: 20px;
+    background: #eee;
+    margin-bottom: 30px;
+    min-width: 400px;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.node--type-library-item .comment-add.nav-link {
+    display: none;
+}
+
+/* fix for comments wrappign in lending library - investigate later*/
+
+@media (min-width: 560px) {
+    .node .comment-comment-node-library-item-form .field--type-image {
+        float: none;
+    }
+}
+
+/* Comments */
+
+/* Style the entire comment form container */
+.comment-wrapper {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the comment form */
+.comment-form {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form title */
+.comment-form__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Improve textarea appearance */
+.comment-form textarea {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+
+/* Style the submit button */
+.comment-form button {
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.comment-form button:hover {
+    background: #0056b3;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 600px) {
+    .comment-form {
+        padding: 10px;
+    }
+    .comment-form textarea {
+        font-size: 14px;
+    }
+    .comment-form button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}

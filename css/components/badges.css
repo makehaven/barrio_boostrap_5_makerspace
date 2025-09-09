@@ -1,0 +1,16 @@
+/* Badge list style */
+
+.view-badges-earned-block tr.Pending {
+    background: #ffa50087;
+}
+
+.view-badges-earned-block tr.Duplicate,.view-badges-earned-block tr.Suspended,.view-badges-earned-block tr.Expired,.view-badges-earned-block tr.Rejected {
+        background: #ff000061;
+        border: 3px solid #c00101;
+}
+
+.view-badges-earned-block tr.Active
+{
+background: #ffffff;
+border-bottom: 3px solid #7d7d7d;
+}

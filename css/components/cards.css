@@ -1,0 +1,20 @@
+/* Cards for member resoruces */
+
+.card {
+    flex: 1 1 300px;
+    box-sizing: border-box;
+}
+
+/* Responsive styling for screens wider than 768px */
+@media (min-width: 768px) {
+    .card-container {
+        justify-content: space-around;
+    }
+}
+
+/* Styling for 3 cards across on large screens */
+@media (min-width: 1024px) {
+    .card {
+        flex: 1 1 calc(33.33% - 20px); /* Three across */
+    }
+}

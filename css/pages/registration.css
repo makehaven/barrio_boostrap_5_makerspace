@@ -1,0 +1,92 @@
+/* Registration Path */
+fieldset#edit-group-chargebee {
+    visibility: hidden;
+    height: 0px;
+}
+
+.user-register-form #edit-group-administrative {
+    visibility: hidden;
+    height: 0px;
+}
+
+
+.profile-main-add-form div#edit-field-member-payment-method-wrapper,
+.profile-main-add-form div#edit-field-membership-type-wrapper
+{
+visibility: hidden;
+height: 0px;
+}
+
+
+.profile-main-add-form .form-type-vertical-tabs {
+    display: none;
+}
+
+
+form#profile-main-add-form button#edit-submit {
+    width: 325px;
+}
+
+
+form#profile-main-add-form #edit-submit:before {
+    content: "Save Profile and Advance to Next Step";
+    min-width: 300px;
+    height: 70px;
+}
+
+.profile-main-add-form profile-form fieldset#edit-group-payment {
+    visibility: hidden;
+}
+
+/* Ensure the waiver section is always visible */
+.page-user-register details#edit-legal {
+    display: block; /* Override the default <details> behavior */
+}
+
+.page-user-register details#edit-legal > summary {
+    display: none; /* Hide the toggle button */
+}
+
+/* Styling waiver checkboxes specifically */
+.page-user-register details#edit-legal .js-form-type-checkbox .form-checkbox {
+    transform: scale(1.5);
+    margin-right: 15px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+/* Styling the checkbox labels within the waiver form */
+.page-user-register details#edit-legal .js-form-type-checkbox .form-check-label {
+    font-size: 1.2em; /* Increase the text size */
+    color: #333; /* Set a clear color */
+    line-height: 1.5; /* Improve readability */
+    display: flex; /* Align label and checkbox horizontally */
+    align-items: center;
+}
+
+/* Add a border around the checkbox container for emphasis */
+.page-user-register details#edit-legal .js-form-type-checkbox {
+    border: 1px solid #bfbfbf;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding-left: 40px;
+}
+
+/* Add hover effect for the container within the waiver form */
+.page-user-register details#edit-legal .js-form-type-checkbox:hover {
+    background-color: #f1f1f1; /* Lighten background on hover */
+    border-color: #000; /* Darken border on hover */
+}
+
+/* Highlight the checkbox on focus */
+.page-user-register details#edit-legal .js-form-type-checkbox .form-checkbox:focus {
+    outline: 2px solid #007bff; /* Blue outline for focus state */
+}
+
+
+.page-user-register div#edit-actions {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

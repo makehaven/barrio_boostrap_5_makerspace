@@ -1,0 +1,43 @@
+/* Login Block */
+
+div#block-barrio-boostrap-5-makehaven-userlogin {
+    padding: 25px;
+    border: solid grey;
+    border-radius: 20px;
+    background: #eee;
+    margin-bottom: 30px;
+    min-width: 400px;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/** login block **/
+
+/* Target the login block */
+.block-user-login-block {
+  position: relative;
+    padding: 25px;
+    border: 5px solid #8b1919;
+    border-radius: 20px;
+    background: #eee;
+    margin-bottom: 30px;
+    min-width: 400px;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* Add the custom message before the form */
+.block-user-login-block:before {
+  content: "Members, please log in to access content and all features.";
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #dc3545; /* Red color for emphasis */
+}
+
+.block-user-login-block a.create-account-link {
+    display: none;
+}

@@ -1,0 +1,107 @@
+/* views exposed filter styles */
+
+/* General form container styling */
+.view-filters .views-exposed-form {
+    background-color: #f8f9fa; /* Light background for better visibility */
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+}
+
+/* Spacing and layout adjustments for form elements */
+.view-filters .views-exposed-form .form-item {
+    flex: 1 1 200px; /* Allows flexible wrapping */
+    margin-bottom: 15px;
+    padding: 0 10px; /* Add horizontal padding */
+}
+
+/* Style input fields */
+.view-filters .views-exposed-form input.form-control,
+.view-filters .views-exposed-form select.form-select {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Adjust fieldset styling */
+.view-filters .views-exposed-form fieldset {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+}
+
+/* Legend styling */
+.view-filters .views-exposed-form fieldset legend {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0 5px;
+}
+
+/* Button styling */
+.view-filters .views-exposed-form .form-actions .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Flexbox container for fields */
+.view-filters .views-exposed-form .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between form items */
+}
+
+/* Small descriptions */
+.view-filters .views-exposed-form .description {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .view-filters .views-exposed-form .d-flex {
+        flex-direction: column;
+    }
+
+    .view-filters .views-exposed-form .form-item {
+        padding: 0;
+    }
+}
+
+/*
+ * A cleaner, modern theme for a Drupal Grid View.
+ * Creates equal-height columns with simple line separators.
+ */
+
+/* 1. Target the ROW (.views-row)
+ * We still use Flexbox to get perfect equal-height columns.
+ * We add a top border to create horizontal separation between rows.
+*/
+.views-view-grid .views-row {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #e0e0e0; /* Horizontal line between rows */
+}
+
+/* Remove the top border from the very first row */
+.views-view-grid .views-row:first-child {
+  border-top: none;
+}
+
+/* 2. Target the COLUMN (.views-col)
+ * This is our content cell. We add padding for breathing room
+ * and a left border to create the vertical separation.
+*/
+.views-view-grid .views-col {
+  box-sizing: border-box;
+  padding: 24px; /* Generous padding for content */
+  border-left: 1px solid #e0e0e0; /* Vertical line between columns */
+}
+
+/* Remove the left border from the first column in each row */
+.views-view-grid .views-col:first-child {
+  border-left: none;
+}

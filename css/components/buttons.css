@@ -1,0 +1,157 @@
+/* Teaser link buttons */
+
+.inline__links a, .view-civi-event-listing .views-field.views-field-nothing {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #861216;
+    border-color: #861216;
+}
+
+.inline__links a:hover
+{
+    background-color: #004c79;
+    color: white;
+}
+
+nav.links.inline {
+    display: block;
+}
+
+
+
+/* Teaser taxonomy buttons */
+
+.node--view-mode-teaser .field--type-entity-reference.field__items .field__item
+
+{
+    pointer-events: none;
+    cursor: default;
+    border: solid 1px #b9b9b9;
+    border-radius: 4px;
+    padding: 5px 15px;
+    margin: 5px 15px 10px 0px;
+    font-size: 18px;
+    width: fit-content;
+    background: #8b1919;
+    color: white;
+    float: left;
+}
+
+.node--view-mode-teaser .field--type-entity-reference .field__item a
+{
+    color: #000000;
+   text-decoration: none;
+}
+
+/** Makes editable fields edit links a button */
+
+a.use-ajax[data-dialog-type="modal"] {
+    display: inline-block;
+    padding: 0.25rem 0.5rem; /* Small button padding */
+    font-size: 0.875rem; /* Small font size */
+    line-height: 1.5;
+    border-radius: 0.2rem;
+    text-decoration: none;
+    color: #fff; /* White text color */
+    background-color: #8b1919; /* Bootstrap primary button color */
+    border: 1px solid #8b1919; /* Border color */
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+a.use-ajax[data-dialog-type="modal"]:hover {
+    background-color: #710a0a; /* Darker shade on hover */
+    border-color: #710a0a;
+    text-decoration: none;
+}
+
+.btn {
+    background-color: #8b1919;
+    color: white;
+  }
+
+
+.btn:hover {
+    background-color: #720c0c;
+    color: white;
+}
+
+a.button {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: 700;
+    line-height: 1rem;
+    color: white;
+    background-color: #8b1919;
+    padding: 12px;
+    margin: 10px 0px;
+}
+
+.btn.btn-info {
+    background: #78c0f3;
+}
+
+a.buttton {
+    background: grey;
+    padding: 10px;
+    color: white;
+    border-radius: 3px;
+}
+
+.btn-primary {
+    background-color: #8b1919 !important;
+    border-color: #8b1919 !important;
+    color: white !important;
+}
+
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #710a0a !important;
+    color: white !important;
+}
+
+button#edit-submit {
+    color: white;
+}
+
+a.btn.btn-primary {
+    color: white;
+}
+
+.button a {
+    color: white;
+}
+
+.view .more-link a {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: 700;
+    line-height: 1rem;
+    color: white;
+    background-color: #8b1919;
+    padding: 12px;
+    margin: 10px 0px;
+}

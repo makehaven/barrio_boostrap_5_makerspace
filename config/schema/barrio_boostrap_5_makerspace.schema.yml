@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Bootstrap Barrio Subtheme.
+
+barrio_boostrap_5_makerspace.settings:
+  type: bootstrap_barrio.settings
+  label: 'Barrio Boostrap 5 MakeHaven settings'

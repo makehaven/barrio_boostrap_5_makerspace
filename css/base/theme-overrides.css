@@ -1,0 +1,11 @@
+/* Temp overrides to fix in main css */
+
+ol.breadcrumb
+{
+	   visibility: visible;
+    margin-top: 15px;
+}
+
+.node .field--type-image {
+    float: none;
+}

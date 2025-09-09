@@ -1,0 +1,176 @@
+/* General Style Improvements */
+
+/* hides things when class of user only */
+
+body:not(.user-logged-in) .user-only {
+  display: none;
+}
+
+
+/* By default, guest-only elements are visible */
+.visitor-only {
+  display: block;
+}
+
+/* Hide guest-only elements when a user is logged in */
+body.user-logged-in .visitor-only {
+  display: none;
+}
+
+
+
+div#page {
+    min-width: 400px;
+}
+
+div#sidebar_first {
+    border: 0px;
+    padding: 15px;
+}
+
+
+.featured-bottom, #main-wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+@media (min-width: 768px) {
+    .container, .container-md, .container-sm {
+        max-width: 100%;
+    }
+}
+
+table.table {
+    background: white;
+}
+
+
+.feed-icons {
+    display: none;
+}
+
+
+.crm-form-submit button
+{
+	font-size: 18px;
+padding: 5px 10px;
+    background: #8b1919;
+}
+
+.btn {
+    background-color: #8b1919;
+  }
+
+
+    .btn:hover {
+    background-color: #720c0c;
+}
+
+
+.crm-form-submit button:hover {
+    background: #b41e1e;
+}
+
+
+.site-footer {
+    margin-top: 30px;
+}
+
+/* to make titles on tabels black rather than white */
+
+th.views-field {
+    color: black;
+}
+
+a.button {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: 700;
+    line-height: 1rem;
+    color: white;
+    background-color: #8b1919;
+    padding: 12px;
+    margin: 10px 0px;
+}
+
+
+
+#block-barrio-boostrap-5-makehaven-page-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#block-barrio-boostrap-5-makehaven-page-title .content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#block-barrio-boostrap-5-makehaven-page-title .title {
+    text-align: center;
+}
+
+.btn.btn-info {
+    background: #78c0f3;
+}
+
+th.views-field {
+    color: black;
+    background: lightgrey;
+}
+
+
+a.buttton {
+    background: grey;
+    padding: 10px;
+    color: white;
+    border-radius: 3px;
+}
+
+
+.site-footer {
+    margin-top: 0px;
+}
+
+table tr th
+{
+	color: grey;
+}
+
+
+.boxes.views-row {
+    padding: 25px;
+    border: solid grey;
+    border-radius: 20px;
+    background: #eee;
+    margin-bottom: 30px;
+    min-width: 400px;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* fixes content of sidebar tables not to wrap */
+.sidebar_first .view-content.row {
+    display: block;
+}
+
+
+.sidebar_first  table caption {
+    caption-side: top;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
+
+div#main {
+    max-width: 1400px;
+    margin: auto;
+}

@@ -1,0 +1,32 @@
+/* Taxonomy term pages */
+
+/* Apply styling to the rows */
+.view-taxonomy-term .view-content .views-row {
+    padding: 30px; /* Retaining this padding */
+    border: 0px solid grey;
+    border-radius: 20px;
+    background: #eee;
+    margin: 10px auto 30px; /* Consolidate margin values */
+    max-width: 450px;
+    float: right;
+}
+
+/* Container for first and last name fields */
+.view-taxonomy-term .view-content .views-row .field--name-field-first-name,
+.view-taxonomy-term .view-content .views-row .field--name-field-last-name {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px; /* Spacing inside the elements */
+    background-color: #f0f0f0; /* Light background color */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    vertical-align: middle; /* Align centrally */
+    font-family: 'Arial', sans-serif; /* Font styling */
+    color: #333; /* Text color */
+}
+
+/* Style the containing element for the entire name block */
+.view-taxonomy-term .view-content .views-row .group-right {
+    margin-top: 10px; /* Space above the names */
+}

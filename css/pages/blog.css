@@ -1,0 +1,6 @@
+/* Blog */
+
+.field.field--name-field-blog-image img {
+    max-width: 100%;
+    height: auto;
+}

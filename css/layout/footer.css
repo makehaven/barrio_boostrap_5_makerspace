@@ -1,0 +1,57 @@
+/* bottom main menu */
+
+.site-footer ul.dropdown-menu {
+    display: block;
+    border: 0px;
+}
+
+.site-footer .site-footer__top .region {
+    width: 100%;
+    padding: 0;
+}
+
+.site-footer li.nav-item.menu-item--expanded.dropdown {
+    max-width: 160px;
+}
+
+.site-footer .dropdown-item
+{
+    font-size: 12px;
+    white-space:normal;
+}
+
+.site-footer .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1000px;
+    padding: 25px;
+    margin: auto;
+}
+
+  .site-footer  .dropdown-menu{
+    border:0;
+    }
+
+    .site-footer .navbar-nav .nav-link {
+    font-size: 20px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.dropdown-toggle::after
+{
+content: none;
+}
+
+.region-footer-third {
+    background: white;
+}
+
+.region-footer-fourth {
+    text-align: center;
+}
+
+.site-footer .block {
+    border: 0;
+}

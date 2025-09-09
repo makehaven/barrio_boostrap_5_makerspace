@@ -1,0 +1,60 @@
+/* Tab menus */
+
+/* Inactive tab styling */
+.nav-tabs .nav-link {
+    background-color: #f8f9fa; /* Light gray background */
+    color: #212529;; /* Primary blue text */
+    border: 1px solid #dee2e6; /* Light gray border */
+    margin-right: 5px;
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for inactive tabs */
+.nav-tabs .nav-link:hover {
+    background-color: #e2e6ea; /* Slightly darker gray on hover */
+    color: #0056b3; /* Darker blue text on hover */
+}
+
+
+/* Tab padding and alignment */
+.nav-tabs {
+    border-bottom: 1px solid #dee2e6; /* Bottom border for the tab container */
+}
+
+/* Active tab styling */
+.main-content .nav-tabs .nav-item.show .nav-link,
+.main-content .nav-tabs .nav-link.active {
+    background-color: #6c757d;
+    color: #ffffff;
+    font-weight: bold;
+    border-color: #333 #555 #ffffff;
+}
+
+
+.nav-tabs .nav-item {
+    margin-bottom: -1px; /* Align tabs with content */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .nav-tabs .nav-item {
+        flex: 1 1 auto; /* Allow tabs to flex and wrap */
+        text-align: center; /* Center text on small screens */
+    }
+}
+
+
+/* Active tab styling */
+.nav-tabs .nav-link.active {
+    background-color: #6c757d;
+    color: #ffffff;
+    font-weight: bold;
+    border-color: #333 #555 #ffffff;
+}
+
+.nav-tabs .nav-link
+{
+    font-size: 20px;
+}

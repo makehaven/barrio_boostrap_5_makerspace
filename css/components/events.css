@@ -1,0 +1,89 @@
+/* Events */
+
+.view-civi-event-listing .views-field.views-field-start-date {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.view-civi-event-listing .views-field-nothing a
+{
+color: white;
+    font-size: large;
+}
+
+.views-field.views-field-nothing {
+    margin-top: 20px;
+}
+
+.view-civi-event-listing .registration-closed {
+    font-size: xxx-large;
+    background: #63636330;
+    text-align: center;
+    position: relative;
+    top: 80px;
+    z-index: 100;
+  font-weight: bold;
+    height: 0px;
+   text-shadow: 2px 2px 20px #000;
+       color: white;
+
+}
+
+.view-civi-event-listing .views-field-field-civi-event-image img.image-style-wide {
+    width: 100%;
+    height: auto;
+}
+
+
+/*Event badge and type Icons*/
+
+.views-field.views-field-event-type-id {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.views-field-event-type-id .Ticketed {
+    background: darkgoldenrod;
+}
+
+.views-field-event-type-id .Program
+	{
+    background: cadetblue;
+    }
+
+.views-field-event-type-id .Public
+	{
+    background: darkgreen;
+    }
+
+
+.views-field-event-type-id .Meetup
+	{
+    background: indigo;
+    }
+
+.views-field-event-type-id .Member
+	{
+    background: black;
+    }
+
+.views-field-event-type-id .Team
+	{
+    background: coral;
+    }
+
+.views-field-event-type-id .Fundraiser
+	{
+    background: crimson;
+    }
+
+.views-field-event-type-id .Partner
+	{
+    background: blueviolet;
+    }
+
+.views-field-event-type-id .Co-Hosted
+	{
+    background: brown;
+    }

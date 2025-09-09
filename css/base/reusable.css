@@ -1,0 +1,13 @@
+/* style for reusable box */
+.box
+{
+    padding: 25px;
+    border: solid grey;
+    border-radius: 20px;
+    background: #eee;
+    margin-bottom: 30px;
+    min-width: 400px;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}

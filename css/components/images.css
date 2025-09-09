@@ -1,0 +1,15 @@
+.field--name-body img,
+.field--type-text-with-summary img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Avoid extra space below the image */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+/** two column layout images **/
+
+.group-left img {
+    max-width: 100%;
+    height: auto;
+    padding-right: 5px;
+}

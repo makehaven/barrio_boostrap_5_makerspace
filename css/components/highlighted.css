@@ -1,0 +1,56 @@
+/* Highlighted Area of Theme */
+
+/* Adjusting the styles for the content inside .highlighted to stand out */
+.highlighted .content {
+    background-color: #f2f2f2; /* Light grey background for contrast */
+    padding: 1rem; /* Padding for internal spacing */
+    margin: 1rem auto; /* Margin for external spacing */
+    border-radius: 0.25rem; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-left: 5px solid #dc3545; /* Solid border for highlight, using brand red */
+}
+
+/* Styling paragraphs inside .highlighted for readability */
+.highlighted .content p {
+    color: #212529; /* Ensuring text is readable against the light grey background */
+    margin-bottom: 0.5rem; /* Space between paragraphs */
+}
+
+/* Adjusting visibility and positioning of the configuration trigger */
+.highlighted .contextual .trigger {
+    visibility: visible;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 10; /* Making sure it's above other content */
+}
+
+/* Styling for contextual links */
+.highlighted .contextual-links {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Updated styles for less glaring but noticeable notices */
+.important-notice {
+    background-color: #fff3cd; /* Soft yellow background */
+    color: #856404; /* Darker text color for contrast without harshness */
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ffeeba; /* Light yellow border for subtle emphasis */
+}
+
+.important-notice p {
+    margin-bottom: 0; /* Keeps content compact */
+}
+
+/* Keeping strong tags noticeable */
+.important-notice strong {
+    color: #856404; /* Darker to stand out within the notice */
+    font-weight: bold;
+}

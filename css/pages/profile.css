@@ -1,0 +1,204 @@
+/* Profile and Account Styles */
+
+/* address field style */
+
+/* Hide the country field (always US) */
+#edit-field-member-address-0-address-country-code--2 {
+    display: none;
+}
+
+/* Adjust the layout for City, State, and Zip */
+#edit-field-member-address-0-address-container2 {
+    display: flex;
+    justify-content: flex-start; /* Align fields to the left */
+    gap: 10px; /* Adds a little space between fields */
+}
+
+/* Increase the width of City and State */
+#edit-field-member-address-0-address-locality {
+    flex: 2; /* Make city take up more space */
+}
+
+#edit-field-member-address-0-address-administrative-area {
+    flex: 1.5; /* Make state wider for full words */
+}
+
+/* Set the width of the Zip field */
+#edit-field-member-address-0-address-postal-code {
+    flex: 0 0 120px; /* Fixed width for Zip code */
+    margin-left: 10px; /* Adjust the left margin to bring it closer to State */
+}
+
+
+/* Profile Field Styles */
+
+/* Default layout for larger screens - Fields aligned beside each other */
+#edit-field-member-birthday-wrapper,
+#edit-field-preferred-phone-wrapper,
+#edit-field-member-instagram-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    width: 32%; /* Each field will take up about a third of the available width */
+    margin-right: 1%; /* Add a bit of space between fields */
+}
+
+/* Remove the margin on the last element to avoid extra space */
+#edit-field-member-instagram-wrapper {
+    margin-right: 0;
+}
+
+/* Mobile layout - Stack fields vertically */
+@media (max-width: 768px) {
+    #edit-field-member-birthday-wrapper,
+    #edit-field-preferred-phone-wrapper,
+    #edit-field-member-instagram-wrapper {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+
+
+/* Set flexbox for the fieldset wrapper */
+#edit-group-characteristics .fieldset-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between items */
+    align-items: flex-start; /* Align items to the top */
+}
+
+/* Set max-width for individual form items */
+#edit-group-characteristics .js-form-item {
+    max-width: 400px; /* Adjust this to control how wide each checkbox/radio can be */
+    flex: 1 1 auto; /* Allow items to flex and wrap */
+    margin-bottom: 15px; /* Ensure consistent spacing between items */
+}
+
+/* On smaller screens, stack items vertically */
+@media (max-width: 768px) {
+    #edit-group-characteristics .js-form-item {
+        flex: 1 1 100%; /* Full width on mobile */
+        max-width: 100%; /* Ensure they don't go beyond the screen width */
+    }
+}
+
+
+/* Set flexbox for the Preferences fieldset wrapper */
+#edit-group-preferences .fieldset-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px; /* Space between items */
+    align-items: flex-start; /* Align items to the top */
+}
+
+/* Set max-width for individual form items in Preferences */
+#edit-group-preferences .js-form-item {
+    max-width: 400px; /* Control how wide each item can be */
+    flex: 1 1 auto; /* Allow items to flex and wrap */
+    margin-bottom: 15px; /* Ensure consistent spacing between items */
+}
+
+/* On smaller screens, stack items vertically in Preferences */
+@media (max-width: 768px) {
+    #edit-group-preferences .js-form-item {
+        flex: 1 1 100%; /* Full width on mobile */
+        max-width: 100%; /* Ensure they don't exceed the screen width */
+    }
+}
+
+/* Set flexbox for the Activity fieldset wrapper */
+#edit-group-activity .fieldset-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px; /* Space between items */
+    align-items: flex-start; /* Align items to the top */
+}
+
+/* Set max-width for individual form items in Activity */
+#edit-group-activity .js-form-item {
+    max-width: 400px; /* Control how wide each item can be */
+    flex: 1 1 auto; /* Allow items to flex and wrap */
+    margin-bottom: 15px; /* Ensure consistent spacing between items */
+}
+
+/* On smaller screens, stack items vertically in Activity */
+@media (max-width: 768px) {
+    #edit-group-activity .js-form-item {
+        flex: 1 1 100%; /* Full width on mobile */
+        max-width: 100%; /* Ensure they don't exceed the screen width */
+    }
+}
+
+
+
+/* Make the button larger and more prominent */
+form#profile-main-add-form #edit-submit {
+    padding: 15px 30px; /* Increase padding for a larger button */
+    font-size: 18px; /* Increase font size */
+    font-weight: bold; /* Make the text bold */
+    border-radius: 8px; /* Add rounded corners */
+}
+
+/* Add some white space underneath the button */
+form#profile-main-add-form #edit-actions {
+    margin-bottom: 30px; /* Adds extra space below the button */
+}
+
+
+/* Hide the original button text */
+form#profile-main-add-form #edit-submit {
+    font-size: 0; /* Hides the original text */
+}
+
+/* Use the :before pseudo-element to display the new text */
+form#profile-main-add-form #edit-submit:before {
+    content: "Save Profile and Advance to Next Step"; /* New text */
+    font-size: 18px; /* Set the text size */
+    font-weight: bold; /* Make the text bold */
+    display: block; /* Ensure it displays properly */
+    padding: 15px 30px; /* Maintain the button's padding */
+    font-size: 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.path-user div#edit-field-member-photo-wrapper {
+    border: solid grey;
+    border-radius: 20px;
+    background: #eee;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+
+.path-user .image-data__crop-wrapper .vertical-tabs__menu
+{    width: 12em;
+}
+
+.headshot-instructions {
+  background-color: #f9f9f9; /* Light background for contrast */
+  border: 1px solid #ddd; /* Subtle border */
+  padding: 15px; /* Space around text */
+  border-radius: 8px; /* Rounded corners */
+  margin-top: 10px; /* Space from other elements */
+  font-size: 14px; /* Adjust font size for readability */
+}
+
+.headshot-instructions .instructions-title {
+  font-size: 16px; /* Larger font for title */
+  font-weight: bold; /* Bold for emphasis */
+  color: #333; /* Darker color for title */
+  display: block; /* Ensure it starts on a new line */
+  margin-bottom: 10px; /* Space below the title */
+}
+
+.headshot-instructions ul {
+  margin: 0;
+  padding-left: 20px; /* Indentation for the list */
+  list-style: disc; /* Add bullet points */
+}
+
+.headshot-instructions li {
+  margin-bottom: 8px; /* Space between list items */
+}

@@ -1,0 +1,21 @@
+/* Universal Structure */
+.featured-bottom, #main-wrapper
+{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.links-inline .nav-link {
+    float: left;
+}
+
+/* reusable style patterns */
+
+.field-content.image-float-left {
+    float: left;
+    padding: 5px 30px 0px 0px;
+}
+
+.field-group-fieldset {
+    width: 100%;
+}
