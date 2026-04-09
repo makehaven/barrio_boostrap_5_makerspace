@@ -7,6 +7,7 @@ base theme: bootstrap_barrio
 libraries:
   - barrio_boostrap_5_makerspace/bootstrap_cdn
   - barrio_boostrap_5_makerspace/global-styling
+  - barrio_boostrap_5_makerspace/page-feedback
 
 regions:
   top_header: 'Top header'

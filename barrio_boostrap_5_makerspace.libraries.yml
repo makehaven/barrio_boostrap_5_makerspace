@@ -57,3 +57,12 @@ color.preview:
     color/preview.js: {}
   dependencies:
     - color/drupal.color
+page-feedback:
+  js:
+    js/page-feedback-widget.js: {}
+  css:
+    theme:
+      css/page-feedback-widget.css: {}
+  dependencies:
+    - core/drupal
+    - core/once
