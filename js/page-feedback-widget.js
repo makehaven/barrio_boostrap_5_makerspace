@@ -234,6 +234,21 @@
       frame.setAttribute('src', FEEDBACK_IFRAME_SRC);
     }
 
+    function chatbotMobileOffsetPx() {
+      // The ai_chatbot widget ships a fixed-position bar that overlaps the
+      // bottom-right corner on mobile. Lift the feedback button above it.
+      // Measure the visible header strip (.ai-deepchat--header) — the outer
+      // .chat-container reports the full panel height even when collapsed
+      // because it just translates off-screen rather than hiding.
+      var header = document.querySelector('.chat-container .ai-deepchat--header');
+      if (!header) {
+        return 0;
+      }
+      var rect = header.getBoundingClientRect();
+      var h = rect && rect.height > 0 ? rect.height : 56;
+      return Math.round(h) + 12;
+    }
+
     function applyPlacement() {
       var mobile = window.innerWidth < 768;
 
@@ -255,7 +270,7 @@
 
       if (mobile) {
         widget.style.right = '1rem';
-        widget.style.bottom = '1rem';
+        widget.style.bottom = 'calc(1rem + ' + chatbotMobileOffsetPx() + 'px)';
         widget.style.top = 'auto';
         widget.style.transform = 'none';
 
@@ -285,6 +300,14 @@
 
     applyPlacement();
     window.addEventListener('resize', applyPlacement);
+    if ('MutationObserver' in window) {
+      var chatObserver = new MutationObserver(function () {
+        if (document.querySelector('.chat-container')) {
+          applyPlacement();
+        }
+      });
+      chatObserver.observe(document.body, { childList: true, subtree: true });
+    }
 
     panel.style.position = 'fixed';
     panel.style.top = '0';
