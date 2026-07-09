@@ -1,6 +1,38 @@
 (function (Drupal, once) {
   var FEEDBACK_FORM_PATHS = ['/website-feedback', '/form/website_feedback'];
   var FEEDBACK_IFRAME_SRC = '/website-feedback?embedded_feedback=1';
+  var LIVE_FEEDBACK_ORIGIN = 'https://www.makehaven.org';
+
+  // On dev/test the local database is periodically overwritten from live, so
+  // feedback submitted there would be silently lost. Send it to the live form
+  // instead (new tab — live cannot be iframed cross-origin). Fail-safe: any
+  // host that is not a known live domain or local dev counts as non-live,
+  // which also covers custom domains (test.makehaven.org) and multidevs.
+  function isNonLiveRemoteEnv() {
+    var host = window.location.hostname;
+    var liveHosts = ['www.makehaven.org', 'makehaven.org', 'connect.makehaven.org', 'live-makehaven-website.pantheonsite.io'];
+    if (liveHosts.indexOf(host) !== -1) {
+      return false;
+    }
+    if (/(\.lndo\.site|^localhost|^127\.0\.0\.1)$/.test(host)) {
+      return false;
+    }
+    return true;
+  }
+
+  function buildLiveFeedbackUrl() {
+    var context = collectPageContext();
+    var url = new URL('/website-feedback', LIVE_FEEDBACK_ORIGIN);
+    url.searchParams.set('page_title', context.sourceTitle);
+    url.searchParams.set('page_url', context.sourceUrl);
+    url.searchParams.set('page_path', context.sourcePath);
+    url.searchParams.set('referrer_url', context.referrerUrl);
+    url.searchParams.set('viewport', context.viewport);
+    url.searchParams.set('page_context', buildCommentTemplate(context));
+    url.searchParams.set('user_agent', context.userAgent);
+    url.searchParams.set('feedback_source', 'bootstrap_widget_nonlive');
+    return url.toString();
+  }
 
   function shouldSkipWidget() {
     if (!document.body.classList.contains('user-logged-in')) {
@@ -424,7 +456,15 @@
       showSuccess(message ? message.textContent.trim() : 'Thanks. Your report was submitted with this page context.');
     });
 
+    if (isNonLiveRemoteEnv()) {
+      toggle.title = 'Opens the live-site feedback form in a new tab so your feedback is kept when the test database is refreshed.';
+    }
+
     toggle.addEventListener('click', function () {
+      if (isNonLiveRemoteEnv()) {
+        window.open(buildLiveFeedbackUrl(), '_blank', 'noopener');
+        return;
+      }
       if (panel.classList.contains('is-open')) {
         closePanel();
         return;
